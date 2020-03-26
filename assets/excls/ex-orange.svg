@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65.548" height="65.548" viewBox="0 0 65.548 65.548">
+  <defs>
+    <filter id="Path_36" x="0" y="0" width="65.548" height="65.548" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#f70"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_33" data-name="Group 33" transform="translate(-1285.309 -615.451)">
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="22" cy="22" r="22" transform="translate(1296 626)" fill="#f70" opacity="0.1"/>
+    <g id="bxs-alarm-exclamation" transform="translate(1307.809 637.951)">
+      <g transform="matrix(1, 0, 0, 1, -22.5, -22.5)" filter="url(#Path_36)">
+        <path id="Path_36-2" data-name="Path 36" d="M13.274,4A10.411,10.411,0,0,0,3,14.274,10.411,10.411,0,0,0,13.274,24.549,10.411,10.411,0,0,0,23.549,14.274,10.411,10.411,0,0,0,13.274,4Zm1.142,15.982H12.133V17.7h2.283Zm0-4.566H12.133V8.566h2.283Z" transform="translate(19.5 18.5)" fill="#f70"/>
+      </g>
+    </g>
+  </g>
+</svg>

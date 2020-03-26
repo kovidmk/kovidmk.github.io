@@ -1,0 +1,187 @@
+<!-- 
+Author: Kristijan Popchev
+Theme: Info & Help about the Virus
+Type: HTML 
+Copyright © All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Македонија | Ковид-19</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161920276-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161920276-1');
+    </script>
+
+</head>
+<body>
+
+    <!-- Ham Menu -->
+    <img id="ham-menu" src="./assets/bx-menu.svg" alt="" class="img-fluid">
+    
+    <!-- Preloader -->
+    <div id="preloader">
+        <img id="pre-cov" src="./assets/pre-cov.svg" alt="Covid-19" class="img-fluid">
+        <div class="split"></div>
+    </div>
+
+    <!-- Shapes -->
+    <img id="shape1" src="./assets/shape1.svg" alt="shape1" class="img-fluid">
+    <img id="shape2" src="./assets/shape2.svg" alt="shape2" class="img-fluid">
+    <!-- Main Section -->
+    <section id="main" class="container-fluid">
+        <nav class="navbar navbar-light justify-content-between">
+            <a class="navbar-brand pointer toLeft"><img src="./assets/sign.svg" alt="Covid-19" class="img-fluid"></a>
+            <div class="navbar-items">
+                <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" class="tran link" target="_blank">
+                    Види <strong>Глобално</strong>
+                    <div class="hover-line tran"></div>
+                </a>
+                <a href="#" class="tran link" data-toggle="tooltip" data-html="true" title="Со притискање на копчето <b>помогни</b> и инсталирање и подигнување на софтверот <b>FAH</b>, донираме компјутерска моќ која помага при <b>истражување на лекот за коронавирусот.</b> <br><br> Тоа нема да влијае на вашата работа. <br><br> Бесплатно е и корисно.">
+                    Како да <strong>Помогнам?</strong>
+                </a>
+                <a href="https://foldingathome.org/start-folding/" class="btn btn-primary btn-md">
+                    <strong>Помогни</strong>
+                </a>
+            </div>
+          </nav>
+
+          <!-- Hero Section -->
+          <section id="content" class="container-fluid">
+            <h1 class="text-left title toLeft">
+                Ажурирани <br>
+                податоци за <strong>коронавирусот</strong> <br>
+                во <strong>Македонија</strong>
+            </h1>
+            <div class="toLeft hasTags">
+                <span class="hash">#СедиДома</span>
+                <span class="hash">#МијРаце</span> <br>
+                <span class="hash">#СпасиЖивот</span>
+            </div>
+            <div class="toLeft mt-5">
+                <a href="https://foldingathome.org/start-folding/" class="btn btn-primary btn-md">
+                    <strong>Помогни</strong>
+                </a>
+                <div class="btn-copy"></div>
+            </div>
+          </section>
+          <div class="date toLeft">
+            <strong>Датум:</strong> <span id="date">25.03.2020</span>
+          </div>
+          <!-- Image -->
+          <img id="hero-img" src="./assets/hero-img3-min.png" alt="Hero Image" class="img-fluid">
+          <!-- API Stats -->
+          <div id="api-stats">
+              <div id="cases" class="bar">
+                <img src="./assets/excls/ex-purple.svg" alt="" class="img-fluid">
+                <div id="api-cases" class="stats"></div>
+                <span>Случаи на Заболени</span>
+              </div>
+              <div class="line-divider"></div>
+              <div id="" class="bar bar-other tran">
+                <img src="./assets/excls/ex-yellow.svg" alt="" class="img-fluid">
+                <div id="api-active" class="stats"></div>
+                <span>Активно Заболени</span>
+              </div>
+              <div class="line-divider"></div>
+              <div id="" class="bar bar-other tran">
+                <img src="./assets/excls/ex-green.svg" alt="" class="img-fluid">
+                <div id="api-recovered" class="stats"></div>
+                <span>Излечени</span>
+              </div>
+              <div class="line-divider"></div>
+              <div id="" class="bar bar-other tran">
+                <img src="./assets/excls/ex-white.svg" alt="" class="img-fluid">
+                <div id="api-daily" class="stats"></div>
+                <span>Дневни Случаи</span>
+              </div>
+              <div class="line-divider"></div>
+              <div id="" class="bar bar-other tran">
+                <img src="./assets/excls/ex-orange.svg" alt="" class="img-fluid">
+                <div id="api-critical" class="stats"></div>
+                <span>Критични Случаи</span>
+              </div>
+              <div class="line-divider"></div>
+              <div id="" class="bar bar-other tran">
+                <img src="./assets/excls/ex-red.svg" alt="" class="img-fluid">
+                <div id="api-deaths" class="stats"></div>
+                <span>Смртни Случаи</span>
+              </div>
+              <br>
+          </div>
+          <!-- Project Partners -->
+          <div id="project-partners">
+            <p><a href="https://foldingathome.org/" target="_blank"><strong>FAH</strong></a> Партнери:</p> <br>
+            <div class="flex-row">
+              <div class="flex">
+                <img src="./assets/fnts.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/massive.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/be.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/google.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/amd.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/evga.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/intel.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/nvidia.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/fnts.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/massive.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/be.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/google.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/amd.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/evga.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/intel.png" alt="" class="img-fluid">
+              </div>
+              <div class="flex">
+                <img src="./assets/nvidia.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <!-- Google Analytics -->
+</body>
+</html>
