@@ -8,6 +8,7 @@ Copyright © All rights reserved.
 // APIs
 // https://coronavirus-tracker-api.herokuapp.com/v2/locations?country_code=MK
 // https://covid-ca.azurewebsites.net/api/covid/countries
+// https://corona.lmao.ninja/countries/mk
 $(function(){
   var $cases = $("#api-cases");
   var $active = $("#api-active");
@@ -15,24 +16,38 @@ $(function(){
   var $daily = $("#api-daily");
   var $critical = $("#api-critical");
   var $deaths = $("#api-deaths");
-  $.get('https://covid-ca.azurewebsites.net/api/covid/countries', function(res,status){
-    let data = JSON.parse(res);
-    for(i in data) {
-      if(data[i].countryInfo._id == '807') {
-        console.log(data[i]);
-        $cases.empty().append(data[i].cases);
-        $active.empty().append(data[i].active);
-        $recovered.empty().append(data[i].recovered);
-        $daily.empty().append(data[i].todayCases);
-        $critical.empty().append(data[i].critical);
-        $deaths.empty().append(data[i].deaths);
+  var $tests = $("#api-tests");
+  $.get('https://corona.lmao.ninja/countries/mk', function(res,status){
+      $cases.empty().append(res.cases);
+      $active.empty().append(res.active);
+      $recovered.empty().append(res.recovered);
+      if(res.todayCases === 0) {
+        $daily.empty().append('/');
+      } else {
+        $daily.empty().append(res.todayCases);
       }
-    }
+      $critical.empty().append(res.critical);
+      $deaths.empty().append(res.deaths);
+      $tests.empty().append(res.tests);
+    // let data = JSON.parse(res);
+    // for(i in data) {
+    //   if(data[i].countryInfo._id == '807') {
+    //     console.log(data[i]);
+    //     $cases.empty().append(data[i].cases);
+    //     $active.empty().append(data[i].active);
+    //     $recovered.empty().append(data[i].recovered);
+    //     $daily.empty().append(data[i].todayCases);
+    //     $critical.empty().append(data[i].critical);
+    //     $deaths.empty().append(data[i].deaths);
+    //   }
+    // }
   }).fail(function(err){
       console.log('Failed fetching data..');
       alert('Моментално не е можен приказ на податоци.');
   });
 });
+
+
 
 // Date
 Date.prototype.toShortFormat = function() {
