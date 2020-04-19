@@ -17,7 +17,7 @@ $(function(){
   var $critical = $("#api-critical");
   var $deaths = $("#api-deaths");
   var $tests = $("#api-tests");
-  $.get('https://corona.lmao.ninja/countries/mk', function(res,status){
+  $.get('https://corona.lmao.ninja/v2/countries/mk', function(res,status){
       $cases.empty().append(res.cases);
       $active.empty().append(res.active);
       $recovered.empty().append(res.recovered);
